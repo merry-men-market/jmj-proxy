@@ -29,5 +29,5 @@ app.get('/api/earnings/:query', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`server running at: ec2-52-53-226-249.us-west-1.compute.amazonaws.com:${port}`);
+  console.log(`server running at: ec2-54-153-118-248.us-west-1.compute.amazonaws.com:${port}`);
 });
