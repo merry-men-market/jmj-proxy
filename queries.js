@@ -1,4 +1,5 @@
 const Pool = require('pg').Pool
+
 const earnings = new Pool({
   user: 'jeena',
   host: 'localhost',
@@ -16,7 +17,7 @@ const getEarningsById = (request, response) => {
       console.log('is working')
       response.status(200).json(results.rows[0])
     })
-  }
+}
 
 
 module.exports.getEarningsById = getEarningsById;
