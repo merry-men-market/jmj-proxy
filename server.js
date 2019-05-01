@@ -19,7 +19,7 @@ app.use('/earnings/:query', express.static(path.join(__dirname, 'public')));
 app.locals.newrelic = newrelic;
 
 app.get('/api/earnings/:query', (req, res) => {
-  axios.get(`http://localhost:3002/api/earnings/${req.params.query}`)
+  axios.get(`ec2-52-53-226-249.us-west-1.compute.amazonaws.com:3002/api/earnings/${req.params.query}`)
     .then((data) => {
       res.status(200).json(data.data);
     })
@@ -29,5 +29,5 @@ app.get('/api/earnings/:query', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`server running at: http://localhost:${port}`);
+  console.log(`server running at: ec2-52-53-226-249.us-west-1.compute.amazonaws.com:${port}`);
 });
