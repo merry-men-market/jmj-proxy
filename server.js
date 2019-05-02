@@ -1,4 +1,4 @@
-const newrelic = require('newrelic');
+// const newrelic = require('newrelic');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use('/earnings/:query', express.static(path.join(__dirname, 'public')));
-app.locals.newrelic = newrelic;
+// app.locals.newrelic = newrelic;
 
 app.get('/api/earnings/:query', (req, res) => {
   axios.get(`ec2-52-53-226-249.us-west-1.compute.amazonaws.com:3002/api/earnings/${req.params.query}`)
