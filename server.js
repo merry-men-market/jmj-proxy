@@ -28,6 +28,8 @@ app.get('/api/earnings/:query', (req, res) => {
     });
 });
 
+app1.use('/', express.static(path.join(__dirname, 'public')));
+
 app.listen(port, () => {
   console.log(`server running at: ec2-54-153-118-248.us-west-1.compute.amazonaws.com:${port}`);
 });
