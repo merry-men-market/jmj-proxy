@@ -25,7 +25,7 @@ app.get('/api/earnings/:query', (req, res) => {
       res.status(200).json(response.data);
     })
     .catch((error) => {
-/      res.sendStatus(404);
+/      res.sendStatus(500);
     });
 });
 
