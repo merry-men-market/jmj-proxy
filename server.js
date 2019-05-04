@@ -20,7 +20,7 @@ app.locals.newrelic = newrelic;
 
 app.get('/api/earnings/:query', (req, res) => {
   // console.log('request made on: ', req.params.query);
-  axios.get(`http://ec2-18-144-52-71.us-west-1.compute.amazonaws.com/api/earnings/${req.params.query}`)
+  axios.get(`http://ec2-18-144-31-133.us-west-1.compute.amazonaws.com/api/earnings/${req.params.query}`)
     .then((response) => {
       // console.log('response: ', response.data);
       res.status(200).json(response.data);
